@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="270px" height="461px" viewBox="0 0 270 461" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1131.000000, -318.000000)">
+        <g id="Group-3" transform="translate(1119.000000, 222.000000)">
+            <path d="M20,213 L62,198" id="Path-7-Copy" stroke="#FFBC01" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M151,551 L210,541" id="Path-7-Copy-2" stroke="#9013FE" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M108,312 L108,348" id="Path-7" stroke="#74D321" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M91,329.5 L124,329.5" id="Path-7" stroke="#74D321" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"></path>
+            <rect id="Rectangle" stroke="#000000" stroke-width="5" fill="#FF8403" transform="translate(259.000000, 393.000000) rotate(27.000000) translate(-259.000000, -393.000000) " x="246" y="370" width="26" height="46" rx="5"></rect>
+            <circle id="Oval-4-Copy-3" fill="#E64AD2" cx="209.5" cy="267.5" r="8.5"></circle>
+            <circle id="Oval-4" fill="#E35050" cx="96" cy="461" r="12"></circle>
+            <rect id="Rectangle" stroke="#000000" stroke-width="5" fill="#6D73FD" transform="translate(181.500000, 130.000000) rotate(-47.000000) translate(-181.500000, -130.000000) " x="163" y="101" width="37" height="58" rx="5"></rect>
+            <rect id="Rectangle-6-Copy" opacity="0.648154438" x="0" y="0" width="315" height="482"></rect>
+        </g>
+    </g>
+</svg>
