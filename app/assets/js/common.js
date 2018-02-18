@@ -5,6 +5,7 @@
 		fcb.topline();
 		fcb.testimonials();
 		fcb.mobileMenu();
+		fcb.smoothScroll();
 	}
 
 	fcb.topline = function() {
@@ -37,6 +38,22 @@
 				e.preventDefault();
 				$(this).toggleClass('opened');
 			})
+		}
+	}
+
+	fcb.smoothScroll = function() {
+		var menu = $('[data-anchor-menu]'),
+			menuLinks = menu.find('a');
+
+		if(menu.length > 0) {
+			menuLinks.click(function(e) {
+				e.preventDefault();
+				var linkAnchor = $(e.target).attr('href'),
+					anchoredElem = $(linkAnchor);
+
+					if(anchoredElem.length > 0) $('body, html').animate({scrollTop: anchoredElem.offset().top}, 300);
+					else console.warn('Anchored elem ' + linkAnchor + ' is not found!');	
+			});
 		}
 	}
 

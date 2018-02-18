@@ -2441,7 +2441,7 @@ header .buttons-list:not(:last-child) {
 
 .testimonials-carousel .owl-next:not(.disabled):hover,
 .testimonials-carousel .owl-prev:not(.disabled):hover {
-  color: #545c96;
+  color: rgba(29, 32, 52, 0.7);
 }
 
 .testimonials-carousel .owl-prev {
@@ -2618,6 +2618,7 @@ footer {
   text-transform: uppercase;
   font-size: 22px;
   color: #2E2E2E;
+  font-weight: 500;
   letter-spacing: 1.83px;
   padding-top: 8px;
 }
@@ -2693,7 +2694,6 @@ footer {
   padding: 16px 24px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #EEF0F4;
   -webkit-box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.12);
   color: #2E2E2E;
@@ -3678,7 +3678,7 @@ footer {
 
   .testimonials-carousel .owl-next:not(.disabled):active,
   .testimonials-carousel .owl-prev:not(.disabled):active {
-    color: #545c96;
+    color: rgba(29, 32, 52, 0.7);
   }
 
   .testimonials-carousel .owl-prev {
