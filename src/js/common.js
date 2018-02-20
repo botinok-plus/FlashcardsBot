@@ -6,8 +6,12 @@
 		fcb.testimonials();
 		fcb.mobileMenu();
 		fcb.smoothScroll();
+		fcb.wow();
+		$(window).resize(fcb.wow);
+	}
 
-		new WOW().init();
+	fcb.wow = function() {
+		if($(window).width() > 767) new WOW().init();
 	}
 
 	fcb.topline = function() {
@@ -52,8 +56,11 @@
 				e.preventDefault();
 				var linkAnchor = $(e.target).attr('href'),
 					anchoredElem = $(linkAnchor);
-					if(anchoredElem.length > 0) $('body, html').animate({scrollTop: anchoredElem.offset().top - (linkAnchor.substr(1) === 'features' ? -30 : 84)}, 300);
-					else console.warn('Anchored elem ' + linkAnchor + ' is not found!');	
+					if(anchoredElem.length > 0) {
+						if($(window).width() < 768) $('[data-mobilemenu]').removeClass('opened');
+						$('body, html').animate({scrollTop: anchoredElem.offset().top - ((linkAnchor.substr(1) === 'features' && $(window).width() > 767) ? -30 : 84)}, 300);
+					} else console.warn('Anchored elem ' + linkAnchor + ' is not found!');
+
 			});
 		}
 	}
