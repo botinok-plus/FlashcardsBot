@@ -1,0 +1,40 @@
+/* Typography */
+h1, h2, h3, h4, h5, h6, blockquote, figcaption, p
+	@extend .reset
+	font-family: $base-ff
+	font-weight: 400
+	color: #2E2E2E
+
+h4
+	font-size: 24px
+	letter-spacing: .33px
+
+h5
+	font-size: 18px
+	letter-spacing: .25px
+
+p
+	color: lighten(#2E2E2E, 20%)
+	font-weight: 300
+
+
+.section-title
+	text-align: center
+	letter-spacing: .44px
+	font-size: 32px
+
+	&.small
+		font-size: 24px
+
+	&:not(:last-child)
+		margin-bottom: 45px
+
+.section-icon
+	text-align: center
+	font-size: 39px
+
+	&:not(:last-child)
+		margin-bottom: 20px
+
+	.icon-heart
+		color: #EA4055

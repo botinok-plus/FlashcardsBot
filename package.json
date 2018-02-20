@@ -1,0 +1,36 @@
+{
+  "name": "sass-starting-project",
+  "version": "1.0.0",
+  "description": "Empty project for dev",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp watch",
+    "minify": "gulp minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/botinok-plus/sass-starting-project.git"
+  },
+  "author": "Alexey Zhylenkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/botinok-plus/sass-starting-project/issues"
+  },
+  "homepage": "https://github.com/botinok-plus/sass-starting-project#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.11",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-delete-file": "^1.0.2",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11",
+    "npm-sass": "^2.2.1",
+    "bootstrap-sass": "^3.3.7"
+  }
+}

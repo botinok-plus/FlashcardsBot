@@ -1,0 +1,105 @@
+.feautures
+	padding-top: 180px
+	padding-bottom: 55px
+
+	+bp-xs
+		padding-top: 60px
+		padding-bottom: 45px
+
+	&-list
+		display: flex
+		flex-wrap: wrap
+
+		&-item
+			float: none
+			padding-top: 15px
+			padding-bottom: 15px
+			display: flex
+			
+			&.comming
+				text-align: center
+
+				+bp-custom(0, 560px)
+					width: 100%
+
+				.feautures-list-item-inner
+					padding-left: 30px
+					padding-right: 30px
+
+				.comming-title
+					font-size: 18px
+					color: #2E2E2E
+					
+
+					& + .comming-image
+						margin-top: 80px
+
+				.comming-image
+					&:not(:last-child)
+						margin-bottom: 35px
+
+				.feautures-title
+					color: #BFC6CD
+					font-size: 18px
+
+			&-inner
+				width: 100%
+				background: linear-gradient(to bottom, #fff 0%, #F2F4F7 100%)
+				box-shadow: 0 10px 20px 0 rgba(#000, .03)
+				border-radius: 5px
+				padding: 40px 45px
+
+			.feautures
+				&-title
+					font-size: 18px
+					color: #2E2E2E
+
+					&:not(:last-child)
+						margin-bottom: 14px
+
+				&-desc
+					@extend .clearfix
+					padding-bottom: 40px
+					border-bottom: 1px solid rgba(#BFC6CD, .5)
+
+					&-content
+						width: calc(100% - 115px)
+						padding-left: 17px
+
+						+bp-xs
+							padding-left: 0
+							text-align: center
+							width: 100%
+
+				&-icon,
+				&-desc-content
+					float: left
+
+					+bp-xs
+						float: none
+
+
+				&-icon
+					width: 115px
+					color: #444
+
+					+bp-xs
+						width: 100%
+						text-align: center
+
+						&:not(:last-child)
+							margin-bottom: 30px
+
+				&-signature
+					padding-top: 27px
+					text-align: center
+
+					&-icon
+						font-size: 27px
+
+						&:not(:last-child)
+							margin-bottom: 15px
+
+					p
+						font-size: 18px
+						color: lighten(#2E2E2E, 20%)

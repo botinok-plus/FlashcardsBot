@@ -1,0 +1,89 @@
+.contact-us
+	padding-top: 80px
+	padding-bottom: 214px
+	position: relative
+
+	+bp-xs
+		padding-top: 20px
+		padding-bottom: 40px
+
+		.container
+			padding-left: 30px
+			padding-right: 30px
+
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		width: 300px
+		height: 600px
+		top: -100px
+		background-repeat: no-repeat
+		background-size: contain
+		z-index: 1
+
+		+bp-xs
+			display: none
+
+	> *
+		position: relative
+		z-index: 2
+
+	&:before
+		left: 22px
+		background-position: center bottom
+		background-image: linear-gradient(to bottom, rgba(#F2F4F7, .3) 0%, rgba(#fff, 0) 100%), url(../img/content/left-bg.svg)
+
+	&:after
+		right: 22px
+		background-position: center center
+		background-image: linear-gradient(to bottom, rgba(#F2F4F7, .3) 0%, rgba(#fff, 0) 100%), url(../img/content/right-bg.svg)
+
+
+
+	&-form
+		width: 35%
+		margin-left: auto
+		margin-right: auto
+
+		+bp-xs
+			width: 100%
+
+		+bp-sm
+			width: 50%
+
+		.form-group
+			&:not(:last-child)
+				margin-bottom: 16px
+
+			input:not([type="image"], [type="file"], [type="checkbox"]),
+			textarea
+				width: 100%
+				display: block
+				outline: none
+				border: none
+				background: none
+				padding: 0
+				border-bottom: 2px solid #2E2E2E
+				font-size: 16px
+				font-family: $base-ff
+
+				+fplaceholder
+					color: rgba(#000, .3)
+					transition: color .2s ease
+
+				&:focus
+					+fplaceholder
+						color: #000
+
+			input:not([type="image"], [type="file"], [type="checkbox"])
+				height: 48px
+
+		.form-actions
+			&:not(:first-child)
+				margin-top: 34px
+
+		[class^="btn-"]
+			width: 100%
+			display: block
+				

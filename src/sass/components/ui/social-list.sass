@@ -1,0 +1,27 @@
+.social-list
+	@extend .reset-list
+	@extend .reset-inline-spacing
+
+	> li
+		display: inline-block
+		vertical-align: middle
+
+		&:not(:last-child)
+			margin-right: 10px
+
+	a
+		color: #2E2E2E
+		font-size: 27px
+		display: block
+		padding-top: 6px
+		transition: color .2s ease
+
+		&:hover
+			color: lighten(#2E2E2E, 20%)
+
+			+bp-xs
+				color: #2E2E2E
+
+		+bp-xs
+			&:active
+				color: lighten(#2E2E2E, 20%)

@@ -1,0 +1,145 @@
+.topline
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 999
+	height: 84px
+	transition: background .2s ease
+
+	+bp-xs
+		height: 64px
+		min-width: $screen-xs-min
+
+	&.scrolled
+		position: fixed
+		box-shadow: 0  1px 10px 0 rgba(#2E2E2E, .1)
+		background: linear-gradient(to bottom, #EEF0F4 0%, #E9ECF3 100%)
+
+	&-logo
+		@extend .reset-inline-spacing
+		padding-top: 30px
+
+		+bp-xs
+			padding-top: 20px
+		
+		a
+			@extend .reset-inline-spacing
+			display: inline-block
+			transition: opacity .2s ease
+			backface-visibility: hidden
+
+			&:active
+				opacity: .8
+
+		.logo-image,
+		.logo-text
+			display: inline-block
+			vertical-align: middle
+
+		.logo-image
+			width: 24px
+			height: 24px
+
+			&:not(:last-child)
+				margin-right: 8px
+
+		.logo-text
+			text-transform: uppercase
+			font-family: $base-ff
+			font-weight: 500
+			color: #2E2E2E
+			font-size: 16px
+			letter-spacing: .89px
+			padding-top: 3px
+
+			+bp-custom(0, 560px)
+				font-size: 14px
+
+	&-nav
+		text-align: right
+		padding-top: 21px
+
+		+bp-xs
+			position: static
+
+		.mobile-menu
+			font-size: 22px
+
+			+bp-xs
+				display: inline-block !important
+
+				&.opened
+					.icon-hamburger:before
+						content: '\e909'
+
+					& + .menu
+						display: block
+
+		.menu
+			@extend .reset-list
+			@extend .reset-inline-spacing
+			display: inline-block
+			text-align: left
+
+			+bp-xs
+				display: none
+				position: absolute
+				width: 100%
+				background-color: #F2F4F7
+				left: 0
+				top: 100%
+				padding: 40px  30px
+				box-shadow: 0 10px 20px 0 rgba(#000, .03)
+
+			li
+				display: inline-block
+				vertical-align: middle
+
+				+bp-xs
+					display: block
+					text-align: center
+
+					&:not(:last-child)
+						margin-right: 0
+						margin-bottom: 20px
+
+				&:not(:last-child)
+					margin-right: 27px
+
+					+bp-sm
+						margin-right: 20px
+						
+
+				&.with-btn
+					&:not(:first-child)
+						margin-left: 10px
+
+						+bp-sm
+							margin-left: 0
+
+					+bp-sm
+						[class^="btn-"]
+							padding-left: 15px
+							padding-right: 15px
+
+				&.current-menu-item a:not([class^="btn-"])
+					color: lighten(#2E2E2E, 25%)
+
+
+
+			a:not([class^="btn-"])
+				font-family: $base-ff
+				font-size: 18px
+				font-weight: 400
+				color: #2E2E2E
+
+				&:hover
+					color: lighten(#2E2E2E, 25%)
+
+					+bp-xs
+						color: #2E2E2E
+
+				+bp-xs
+					&:active
+						color: lighten(#2E2E2E, 25%)

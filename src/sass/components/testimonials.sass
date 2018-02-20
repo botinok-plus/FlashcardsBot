@@ -1,0 +1,104 @@
+.testimonials
+	padding-top: 60px
+	padding-bottom: 80px
+
+	+bp-xs
+		padding-top: 40px
+		padding-bottom: 20px
+
+	&-carousel
+		.owl-item
+			img
+				width: auto
+
+		&-item
+			width: 65.26%
+			margin-left: auto
+			margin-right: auto
+			text-align: center
+
+			+bp-xs
+				width: 100%
+
+			p
+				color: rgba(#191D31, .8)
+
+		&-author
+			&:not(:first-child)
+				margin-top: 60px
+
+				+bp-xs
+					margin-top: 40px
+
+			.author-photo
+				width: 55px
+				height: 55px
+				margin-left: auto
+				margin-right: auto
+				border-radius: 50%
+				overflow: hidden
+				position: relative
+
+				&:not(:last-child)
+					margin-bottom: 21px
+
+				img
+					position: absolute
+					width: auto
+					height: auto
+					min-width: 100%
+					min-height: 100%
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+
+			.author-name
+				font-size: 18px
+				color: #000
+
+			.author-position
+				font-size: 16px
+				color: #B3B3B3
+
+		+bp-xs
+			.owl-nav
+				text-align: center
+				margin-top: 40px
+
+
+		.owl-next,
+		.owl-prev
+			position: absolute
+			top: calc(50% - 95px)
+			transform: translateY(-50%)
+			font-size: 33px
+			color: #1D2034
+			transition: color .2s ease
+
+			+bp-xs
+				position: static
+				transform: none
+				display: inline-block
+
+			&.disabled
+				opacity: .5
+				cursor: default
+
+			&:not(.disabled):hover
+				color: rgba(#1D2034, .7)
+
+				+bp-xs
+					color: #1D2034
+
+			+bp-xs
+				&:not(.disabled):active
+					color: rgba(#1D2034, .7)
+
+
+		.owl-prev
+			left: 30px
+			+bp-xs
+				margin-right: 20px
+
+		.owl-next
+			right: 30px

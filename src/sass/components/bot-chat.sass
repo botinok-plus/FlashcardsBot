@@ -1,0 +1,130 @@
+.bot-chat
+	float: none
+	margin-left: auto
+	margin-right: auto
+	overflow: hidden
+	position: relative
+	margin-bottom: -180px
+
+	+bp-xs
+		display: none
+
+	&-header
+		height: 40px
+		background-color: #F2F3F7
+		padding: 14px 17px 16px
+		border-radius: 5px 5px 0 0
+
+		&-nav
+			@extend .reset-list
+			@extend .reset-inline-spacing
+
+			li
+				display: inline-block
+
+				&:not(:last-child)
+					margin-right: 10px
+
+				button
+					display: block
+					width: 10px
+					height: 10px
+					border-radius: 50%
+
+				&:first-child
+					button
+						background-color: #D8D8D8
+
+				&:nth-child(2)
+					button
+						background-color: rgba(#D8D8D8, .5)
+
+				&:nth-child(3)
+					button
+						background-color: rgba(#D8D8D8, .3)
+
+	&-content
+		background: linear-gradient(to bottom, #fff 0%, #F2F4F7 100%)
+		height: 423px
+		overflow: auto
+		overflow-x: hidden
+		padding: 40px 37px
+		
+
+	&-message
+		position: relative
+
+		&:not(:last-child)
+			margin-bottom: 10px
+
+		&.my
+			@extend .clearfix
+
+			.message-inner
+				float: right
+				max-width: calc(50% + 55px)
+
+			.message-author
+				left: auto
+				right: 0
+
+			.message-text
+				margin-right: 55px
+				margin-left: 0
+
+				&:before
+					left: auto
+					right: -5px
+
+
+		.message-author
+			width: 38px
+			height: 38px
+			border-radius: 50%
+			position: absolute
+			overflow: hidden
+			left: 0
+			bottom: 17px
+
+			> img
+				position: absolute
+				min-width: 100%
+				min-height: 100%
+				width: auto
+				height: auto
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+		.message-text
+			margin-left: 55px
+			border-radius: 5px
+			background-color: #F2F3F7
+			display: inline-block
+			min-height: 67px
+			position: relative
+			padding: 20px 32px
+
+			&:before
+				content: ''
+				background-color: inherit
+				display: block
+				position: absolute
+				left: -5px
+				width: 24px
+				height: 24px
+				border-radius: 2px
+				transform: rotate(45deg)
+				z-index: 1
+				bottom: 22px
+
+			> *
+				position: relative
+				z-index: 2
+
+
+			p
+				color: #777E97
+				font-size: 14px
+
+		

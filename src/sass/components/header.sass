@@ -1,0 +1,63 @@
+/* Header */
+header
+	background: linear-gradient(to bottom, #EEF0F4 0%, #E9ECF3 100%)
+	padding-top: 163px
+	position: relative
+
+	+bp-xs
+		background: none
+		padding-top: 100px
+
+		.container
+			padding-left: 30px
+			padding-right: 30px
+
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		width: 300px
+		height: 600px
+		bottom: -50px
+		background-repeat: no-repeat
+		background-size: contain
+		z-index: 1
+
+		+bp-xs
+			display: none
+
+	> *
+		position: relative
+		z-index: 2
+
+	&:before
+		left: 22px
+		background-position: center bottom
+		background-image: linear-gradient(to bottom, rgba(#EEF0F4, .3) 0%, rgba(#fff, 0) 100%), url(../img/content/left-bg.svg)
+
+	&:after
+		right: 22px
+		background-position: center center
+		background-image: linear-gradient(to bottom, rgba(#EEF0F4, .3) 0%, rgba(#fff, 0) 100%), url(../img/content/right-bg.svg)
+
+	.header-text
+		width: 86%
+		margin-left: auto
+		margin-right: auto
+
+		+bp-xs
+			width: 100%
+
+		&:not(:last-child)
+			margin-bottom: 40px
+
+	.section-title
+		&:not(:last-child)
+			margin-bottom: 10px
+
+	.buttons-list
+		&:not(:last-child)
+			margin-bottom: 97px
+
+			+bp-xs
+				margin-bottom: 0

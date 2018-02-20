@@ -1,0 +1,118 @@
+/* Base */
+*,
+body
+	font-family: $base-ff
+	word-wrap: break-word
+
+html,
+body
+	background-color: #F2F4F7
+	font-size: $base-fz
+	min-width: $screen-xs-min
+
+body
+	animation-name: fadeIn
+	animation-duration: .6s
+	position: relative
+
+	&.disabled_scroll
+		overflow: hidden
+		height: 100vh
+
+a
+	color: $link-color
+	transition: color .2s ease
+
+	&:focus,
+	&:hover
+		text-decoration: none
+		color: $link-hover-color
+
+	&:active
+		color: $link-action-color
+
+nav
+	ul
+		@extend .reset-list
+
+img
+	max-width: 100%
+	height: auto
+	backface-visibility: hidden
+
+.reset-inline-spacing
+	letter-spacing: -1px
+	font-size: 0
+
+	> *
+		letter-spacing: 0
+		font-size: $base-fz
+
+.responsive-bg
+	background-position: 50% 50% !important
+	background-size: cover !important
+	background-repeat: no-repeat !important
+
+.reset
+	padding: 0
+	margin: 0
+
+	&-list
+		@extend .reset
+		list-style: none
+
+	&-btn
+		@extend .reset
+		display: inline-block
+		vertical-align: top
+		border: none
+		outline: none
+		background: none
+		line-height: 1.2em
+		text-align: center
+
+.no-paddings
+	padding: 0
+
+.no-margins
+	margin: 0
+
+.no-pl
+	padding-left: 0
+
+.no-pr
+	padding-right: 0
+
+.no-pt
+	padding-top: 0
+
+.no-pb
+	padding-bottom: 0
+
+.no-mr
+	margin-right: 0
+
+.no-ml
+	margin-left: 0
+
+.no-mt
+	margin-top: 0
+
+.no-mb
+	margin-bottom: 0
+
+.no-h-paddings
+	padding-left: 0
+	padding-right: 0
+
+.no-v-paddings
+	padding-top: 0
+	padding-bottom: 0
+
+.no-v-margins
+	margin-top: 0
+	margin-bottom: 0
+
+.no-h-margins
+	margin-left: 0
+	margin-right: 0

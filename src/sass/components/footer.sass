@@ -1,0 +1,60 @@
+/* Footer */
+
+footer
+	border-top: 1px solid rgba(#979797, .5)
+	padding-top: 33px
+	padding-bottom: 36px
+	background-color: #F2F4F7
+	position: relative
+	z-index: 2
+
+	+bp-xs
+		padding-top: 23px
+		padding-bottom: 26px
+
+.footer
+	&-logo
+		text-transform: uppercase
+		font-size: 22px
+		color: #2E2E2E
+		font-weight: 500
+		letter-spacing: 1.83px
+		padding-top: 8px
+
+		+bp-xs
+			display: none
+
+		a
+			color: #2E2E2E
+
+	&-nav
+		@extend .clearfix
+
+		+bp-xs
+			width: 100%
+
+		.buttons-list
+			@extend .clearfix
+			float: right
+
+			+bp-xs
+				float: none
+
+			> li
+				vertical-align: middle
+
+				&:not(:last-child)
+					margin-right: 30px
+
+					+bp-xs
+						margin-right: 0
+						margin-bottom: 0
+
+				+bp-xs
+					&:nth-child(1)
+						float: left
+						width: 40%
+
+					&:nth-child(2)
+						float: right
+						width: 60%

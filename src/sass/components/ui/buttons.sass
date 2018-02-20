@@ -1,0 +1,106 @@
+//buttons
+button,
+input[type="submit"],
+*[class^="btn-"]
+	@extend .reset-btn
+
+.btn
+	font-size: 16px
+	font-family: $base-ff
+	padding: 9px 20px
+	border-radius: 5px
+
+	&.disabled,
+	&[disabled]
+		cursor: default
+		user-select: none
+
+	&-black
+		@extend .btn
+
+		&-outline
+			@extend .btn
+			border: 2px solid #2C2C2C
+			color: #2E2E2E
+			padding-left: 30px
+			padding-right: 30px
+			font-size: 18px
+			letter-spacing: 1.5px
+			transition: background-color .2s ease, color .2s ease
+
+			&:not([disabled], .disabled):focus
+				color: #2E2E2E
+
+			&:not([disabled], .disabled):hover
+				color: #EEF0F4
+				background-color: #2C2C2C
+
+				+bp-xs
+					color: #2E2E2E
+					background: none
+
+			+bp-xs
+				&:not([disabled], .disabled):active
+					color: #EEF0F4
+					background-color: #2C2C2C
+
+	&-white
+		@extend .btn
+		background-color: #fff
+		padding: 16px 24px
+		border-radius: 3px
+		box-shadow: 0 12px 14px 0 rgba(#000, .12)
+		color: #2E2E2E
+		transition: box-shadow .2s ease, transform .2s ease
+
+		&.disabled,
+		&[disabled]
+			color: rgba(#2E2E2E, .3)
+
+
+		&:not([disabled], .disabled):focus,
+		&:not([disabled], .disabled):hover
+			color: #2E2E2E
+
+		&:not([disabled], .disabled):hover
+			box-shadow: 0 22px 24px 0 rgba(#000, .22)
+			transform: translateY(-5px)
+
+			+bp-xs
+				box-shadow: 0 12px 14px 0 rgba(#000, .12)
+				transform: none
+
+		+bp-xs
+			&:not([disabled], .disabled):active
+				box-shadow: 0 22px 24px 0 rgba(#000, .22)
+				transform: translateY(-5px)
+
+		[class^="icon-"]
+			vertical-align: middle
+			margin-right: 12px
+			font-size: 24px
+
+		.icon-messenger
+			color: #0084ff
+
+.buttons-list
+	@extend .reset-list
+	@extend .reset-inline-spacing
+
+	> li
+		display: inline-block
+		vertical-align: top
+
+		+bp-xs
+			display: block
+			width: 100%
+
+			&:not(:last-child)
+				margin-right: 0
+				margin-bottom: 17px
+
+		&:not(:last-child)
+			margin-right: 20px
+
+		> *
+			display: block
