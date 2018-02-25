@@ -7,6 +7,7 @@
 		fcb.mobileMenu();
 		fcb.smoothScroll();
 		fcb.wow();
+		fcb.paralax();
 		$(window).resize(fcb.wow);
 	}
 
@@ -63,6 +64,126 @@
 
 			});
 		}
+	}
+
+
+	fcb.paralax = function() {
+
+		var Visible = function (target, visible, invisible) {
+			// Все позиции элемента
+			var targetPosition = {
+				top: window.pageYOffset + target.getBoundingClientRect().top,
+				left: window.pageXOffset + target.getBoundingClientRect().left,
+				right: window.pageXOffset + target.getBoundingClientRect().right,
+				bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+			  },
+			  // Получаем позиции окна
+			  windowPosition = {
+				top: window.pageYOffset,
+				left: window.pageXOffset,
+				right: window.pageXOffset + document.documentElement.clientWidth,
+				bottom: window.pageYOffset + document.documentElement.clientHeight
+			  };
+		  
+			if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+			  targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+			  targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+			  targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+			 
+				if(typeof visible != 'undefined') visible(target);
+			} else {
+				if(typeof invisible != 'undefined') invisible(target);
+			};
+		};
+		/**
+		 * Cache
+		 */
+		var $content = $('header .before, header .after'),
+			$content2 = $('.contact-us .before, .contact-us .after'),
+			wHeight  = $(window).height();
+
+		$(window).on('resize', function(){
+			wHeight = $(window).height();
+		});
+
+		/**
+		* requestAnimationFrame Shim 
+		*/
+		window.requestAnimFrame = (function() {
+			return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ){ window.setTimeout(callback, 1000 / 60); };
+		})();
+
+		/**
+		* Scroller
+		*/
+		function Scroller()
+		{
+			this.latestKnownScrollY = 0;
+			this.ticking            = false;
+		}
+
+		Scroller.prototype = {
+			/**
+			 * Initialize
+			 */
+			init: function() {
+				window.addEventListener('scroll', this.onScroll.bind(this), false);
+			},
+
+			/**
+			 * Capture Scroll
+			 */
+			onScroll: function() {
+				this.latestKnownScrollY = window.scrollY;
+				this.requestTick();
+			},
+
+			/**
+			 * Request a Tick
+			 */
+			requestTick: function() {
+			if( !this.ticking ) {
+				window.requestAnimFrame(this.update.bind(this));
+			}
+				this.ticking = true;
+			},
+
+			/**
+			 * Update.
+			 */
+			update: function() {
+				var currentScrollY = this.latestKnownScrollY;
+				this.ticking       = false;
+				
+				/**
+				 * Do The Dirty Work Here
+				 */
+
+				Visible($content.get(0), function() {
+					var slowScroll = currentScrollY / 8;
+					$content.css({
+						'transform'         : 'translateY(-' + slowScroll + 'px)',
+						'-moz-transform'    : 'translateY(-' + slowScroll + 'px)',
+						'-webkit-transform' : 'translateY(-' + slowScroll + 'px)'
+					});
+				});
+
+				Visible($content2.get(0), function(e) {
+					var slowScroll = ($(e).parents('.contact-us').offset().top - currentScrollY) / 6;
+					$content2.css({
+						'transform'         : 'translateY(-' + slowScroll + 'px)',
+						'-moz-transform'    : 'translateY(-' + slowScroll + 'px)',
+						'-webkit-transform' : 'translateY(-' + slowScroll + 'px)'
+					});
+				});
+			}
+		};
+
+		/**
+		* Attach!
+		*/
+		var scroller = new Scroller();  
+		scroller.init();
 	}
 
 	$(document).ready(fcb.init);
