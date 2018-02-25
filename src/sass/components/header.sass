@@ -12,8 +12,8 @@ header
 			padding-left: 30px
 			padding-right: 30px
 
-	&:before,
-	&:after
+	.before,
+	.after
 		content: ''
 		position: absolute
 		width: 300px
@@ -30,12 +30,12 @@ header
 		position: relative
 		z-index: 2
 
-	&:before
+	.before
 		left: 22px
 		background-position: center bottom
 		background-image: linear-gradient(to bottom, rgba(#EEF0F4, .3) 0%, rgba(#fff, 0) 100%), url(../img/content/left-bg.svg)
 
-	&:after
+	.after
 		right: 22px
 		background-position: center center
 		background-image: linear-gradient(to bottom, rgba(#EEF0F4, .3) 0%, rgba(#fff, 0) 100%), url(../img/content/right-bg.svg)
@@ -55,7 +55,8 @@ header
 		&:not(:last-child)
 			margin-bottom: 10px
 
-	.buttons-list
+	.buttons-list,
+	.header-content
 		&:not(:last-child)
 			margin-bottom: 97px
 
