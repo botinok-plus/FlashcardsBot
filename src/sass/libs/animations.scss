@@ -10,17 +10,6 @@
  * Copyright (c) 2018 Daniel Eden
  */
 
- .wow {
-  +bp-xs {
-    visibility: visible !important;
-    -webkit-animation: none !important;
-      -moz-animation: none !important;
-        -o-animation: none !important;
-        -ms-animation: none !important;
-            animation: none !important;
-  }
- }
-
 .animated {
   -webkit-animation-duration: .7s;
   animation-duration: .7s;
