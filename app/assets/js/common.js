@@ -8,11 +8,10 @@
 		fcb.smoothScroll();
 		fcb.wow();
 		fcb.paralax();
-		$(window).resize(fcb.wow);
 	}
 
 	fcb.wow = function() {
-		if($(window).width() > 767) new WOW().init();
+		new WOW().init();
 	}
 
 	fcb.topline = function() {
@@ -85,11 +84,10 @@
 				bottom: window.pageYOffset + document.documentElement.clientHeight
 			  };
 		  
-			if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-			  targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-			  targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-			  targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-			 
+			if (targetPosition.bottom > windowPosition.top &&
+			  targetPosition.top < windowPosition.bottom &&
+			  targetPosition.right > windowPosition.left &&
+			  targetPosition.left < windowPosition.right) {
 				if(typeof visible != 'undefined') visible(target);
 			} else {
 				if(typeof invisible != 'undefined') invisible(target);
