@@ -2598,6 +2598,11 @@ header .header-content:not(:last-child) {
   margin-right: auto;
 }
 
+.contact-us-form .form-group {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
 .contact-us-form .form-group:not(:last-child) {
   margin-bottom: 16px;
 }
@@ -2613,6 +2618,8 @@ header .header-content:not(:last-child) {
   border-bottom: 2px solid #2E2E2E;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 .contact-us-form .form-group input:not([type="image"]):not([type="file"]):not([type="checkbox"])[placeholder],
