@@ -1982,6 +1982,12 @@ p {
   margin-bottom: 45px;
 }
 
+.title {
+  text-align: center;
+  letter-spacing: .44px;
+  font-size: 32px;
+}
+
 .section-icon {
   text-align: center;
   font-size: 39px;
@@ -2167,6 +2173,10 @@ header .header-text:not(:last-child) {
 }
 
 header .section-title:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+header .title:not(:last-child) {
   margin-bottom: 10px;
 }
 
