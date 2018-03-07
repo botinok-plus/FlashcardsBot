@@ -7,6 +7,7 @@ build:
 	gulp minify
 
 deploy:
+	make build
 	aws s3 rm s3://flashcardsbot.com/index.html --region eu-central-1
 	aws s3 rm s3://flashcardsbot.com/assets/ --recursive --region eu-central-1
 	aws s3 cp ./app s3://flashcardsbot.com/ --recursive --region eu-central-1
